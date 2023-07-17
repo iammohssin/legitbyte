@@ -1,60 +1,288 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-    <!-- Begin Head -->
-    <head>
-        <!-- Basic -->
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>LegitByte</title>
-        <meta name="keywords" content="HTML5 Theme" />
-        <meta name="description" content="Empowering Innovation for a Digital Universe">
-        <meta name="author" content="legitbyte.com">
+  <!-- Begin Head -->
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>LegitByte</title>
+    <meta name="keywords" content="HTML5 Theme" />
+    <meta
+      name="description"
+      content="Empowering Innovation for a Digital Universe"
+    />
+    <meta name="author" content="legitbyte.com" />
 
-        <!-- Web Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+    <!-- Web Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700"
+      rel="stylesheet"
+    />
 
-        <!-- Vendor Styles -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/themify/themify.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/scrollbar/scrollbar.min.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/swiper/swiper.min.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Vendor Styles -->
+    <link
+      href="vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/themify/themify.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/scrollbar/scrollbar.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/magnific-popup/magnific-popup.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/swiper/swiper.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/cubeportfolio/css/cubeportfolio.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-        <!-- Theme Styles -->
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
+    <!-- Theme Styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/global/global.css" rel="stylesheet" type="text/css" />
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/site.webmanifest">
-    </head>
-    <!-- End Head -->
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+  </head>
 
-    <!-- Body -->
-    <body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
-        <!--========== HEADER ==========-->
-        <header class="navbar-fixed-top s-header js__header-sticky js__header-overlay">
-            <!-- Navbar -->
-            <div class="s-header__navbar">
-                <div class="s-header__container">
-                    <div class="s-header__navbar-row">
-                        <div class="s-header__navbar-row-col">
-                            <!-- Logo -->
-                            <div class="s-header__logo">
+    .slider-container {
+      width: 100%;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    .slider {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      color: #fff;
+    }
+
+    /* Customize slide styles as needed */
+    .slide:nth-child(1) {
+      background-color: #ec9b7e;
+    }
+    .slide:nth-child(2) {
+      background-color: #ff6262e8;
+    }
+
+    button {
+      border: none;
+      overflow-y: hidden;
+      padding: 5px 40px;
+      font-size: 24px;
+      position: relative;
+      background: transparent;
+      color: #ffffff;
+      text-transform: uppercase;
+      border: 3px solid #ffffff;
+      cursor: pointer;
+      transition: all 0.7s;
+      overflow: hidden;
+      border-radius: 20px;
+      left: 15%;
+    }
+
+    button:hover {
+      color: #ffffff;
+    }
+    span {
+      transition: all 0.7s;
+      z-index: -1;
+    }
+
+    button .first {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      background: #8f8d88;
+    }
+
+    button:hover .first {
+      top: 0;
+      right: 0;
+    }
+    button .second {
+      content: "";
+      position: absolute;
+      left: 25%;
+      top: -100%;
+      height: 100%;
+      width: 25%;
+      background: #8f8d88;
+    }
+
+    button:hover .second {
+      top: 0;
+      left: 50%;
+    }
+
+    button .third {
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      top: 100%;
+      width: 25%;
+      background: #8f8d88;
+    }
+
+    button:hover .third {
+      top: 0;
+      left: 25%;
+    }
+
+    button .fourth {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 0;
+      height: 100%;
+      width: 25%;
+      background: #8f8d88;
+    }
+
+    button:hover .fourth {
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slider = document.querySelector(".slider-container");
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
+
+      slider.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        const delta = e.deltaY;
+
+        if (delta > 0) {
+          // Scroll down - go to the next slide if available
+          if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            scrollSliderToCurrentSlide();
+          }
+        } else {
+          // Scroll up - go to the previous slide if available
+          if (currentSlide > 0) {
+            currentSlide--;
+            scrollSliderToCurrentSlide();
+          }
+        }
+      });
+
+      function scrollSliderToCurrentSlide() {
+        slider.scroll({
+          left: slides[currentSlide].offsetLeft,
+          behavior: "smooth",
+        });
+      }
+    });
+  </script>
+  <!-- End Head -->
+
+  <!-- Body -->
+  <body>
+    <!--========== HEADER ==========-->
+    <header
+      class="navbar-fixed-top s-header js__header-sticky js__header-overlay"
+    >
+      <!-- Navbar -->
+      <div class="s-header__navbar">
+        <div class="s-header__container">
+          <div class="s-header__navbar-row">
+            <div class="s-header__navbar-row-col">
+              <!-- Logo -->
+              <!-- <div class="s-header__logo">
                                 <a href="index.html" class="s-header__logo-link">
-                                    <img class="s-header__logo-img s-header__logo-img-default" style="height: 100px; border-radius: 50%;" src="img/legitlogo.png" alt="LegitByte Logo">
-                                    <img class="s-header__logo-img s-header__logo-img-shrink" style="height: 100px; border-radius: 50%;" src="img/legitlogo.png" alt="LegitByte Logo">
+                                    <img class="s-header__logo-img s-header__logo-img-default" style="height: 160px;position: relative; bottom:50px ; " src="img/t2logo2.png" alt="LegitByte Logo">
+                                    <img class="s-header__logo-img s-header__logo-img-shrink" style="height: 160px; " src="img/t2logo.png" alt="LegitByte Logo">
                                 </a>
-                            </div>
-                            <!-- End Logo -->
-                        </div>
-                        <!-- <div class="s-header__navbar-row-col">
+                            </div> -->
+
+              <!-- 
+                            <div class="s-header__logo" style="width: 160px; height: 80px; overflow: hidden;">
+                                <a href="index.html" class="s-header__logo-link">
+                                    <img class="s-header__logo-img s-header__logo-img-default" style="height: 160px; transform: translateY(-40px);" src="img/t2logo2.png" alt="LegitByte Logo">
+                                    <img class="s-header__logo-img s-header__logo-img-shrink" style="height: 80px;" src="img/t2logo.png" alt="LegitByte Logo">
+                                </a>
+                            </div> -->
+
+              <div
+                class="s-header__logo"
+                style="width: 160px; height: 90px; overflow: hidden"
+              >
+                <a href="index.html" class="s-header__logo-link">
+                  <img
+                    class="s-header__logo-img s-header__logo-img-default"
+                    style="height: 180px; transform: translateY(-40px)"
+                    src="img/t2logo2.png"
+                    alt="LegitByte Logo"
+                  />
+                  <img
+                    class="s-header__logo-img s-header__logo-img-shrink"
+                    style="height: 180px; transform: translateY(-40px)"
+                    src="img/t2logo.png"
+                    alt="LegitByte Logo"
+                  />
+                </a>
+              </div>
+
+              <!-- End Logo -->
+            </div>
+            <!-- <div class="s-header__navbar-row-col">
                             <a href="javascript:void(0);" class="s-header__trigger js__trigger">
                                 <span class="s-header__trigger-icon"></span>
                                 <svg x="0rem" y="0rem" width="3.125rem" height="3.125rem" viewbox="0 0 54 54">
@@ -62,15 +290,15 @@
                                 </svg>
                             </a>
                         </div> -->
-                    </div>
-                </div>
-            </div>
-            <!-- End Navbar -->
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
 
-            <!-- Overlay -->
-            <!-- <div class="s-header-bg-overlay js__bg-overlay"> -->
-                <!-- Nav -->
-                <!-- <nav class="s-header__nav js__scrollbar">
+      <!-- Overlay -->
+      <!-- <div class="s-header-bg-overlay js__bg-overlay"> -->
+      <!-- Nav -->
+      <!-- <nav class="s-header__nav js__scrollbar">
                     <div class="container-fluid">
                                  
                         <ul class="list-unstyled s-header__nav-menu">
@@ -93,17 +321,17 @@
                         </ul>
                     </div>
                 </nav> -->
-                <!-- End Nav -->
-                
-                <!-- Action -->
-                <!-- <ul class="list-inline s-header__action s-header__action--lb">
+      <!-- End Nav -->
+
+      <!-- Action -->
+      <!-- <ul class="list-inline s-header__action s-header__action--lb">
                     <li class="s-header__action-item"><a class="s-header__action-link -is-active" href="#">En</a></li>
                     <li class="s-header__action-item"><a class="s-header__action-link" href="#">Fr</a></li>
                 </ul> -->
-                <!-- End Action -->
+      <!-- End Action -->
 
-                <!-- Action -->
-                <!-- <ul class="list-inline s-header__action s-header__action--rb">
+      <!-- Action -->
+      <!-- <ul class="list-inline s-header__action s-header__action--rb">
                     <li class="s-header__action-item">
                         <a class="s-header__action-link" href="#">
                             <i class="g-padding-r-5--xs ti-facebook"></i>
@@ -123,149 +351,232 @@
                         </a>
                     </li>
                 </ul> -->
-                <!-- End Action -->
-            <!-- </div> -->
-            <!-- End Overlay -->
-        </header>
-        <!--========== END HEADER ==========-->
+      <!-- End Action -->
+      <!-- </div> -->
+      <!-- End Overlay -->
+    </header>
+    <!--========== END HEADER ==========-->
 
-        <!--========== SWIPER SLIDER ==========-->
-        <div class="s-swiper js__swiper-one-item">
-            <!-- Swiper Wrapper -->
-            <div class="swiper-wrapper">
-                <div class="g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('img/1920x1080/02.jpg');">
-                    <div class="container g-text-center--xs g-ver-center--xs">
-                        <div class="g-margin-b-30--xs">
-                            <h1 class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">Empowering Innovation<br>for a Digital Universel</h1>
-                        </div>
-                        <!-- <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
+    <!--========== SWIPER SLIDER ==========-->
+    <div class="s-swiper js__swiper-one-item">
+      <!-- Swiper Wrapper -->
+      <div class="swiper-wrapper">
+        <div
+          class="g-fullheight--xs g-bg-position--center swiper-slide"
+          style="background: url('img/1920x1080/02.jpg')"
+        >
+          <div class="container g-text-center--xs g-ver-center--xs">
+            <div class="g-margin-b-30--xs">
+              <h1
+                class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"
+              >
+                Empowering Innovation<br />for a Digital Universe
+              </h1>
+            </div>
+            <!-- <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
                             <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-control-play"></i>
                         </a> -->
-                    </div>
-                </div>
-                <div class="g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('img/1920x1080/01.jpg');">
-                    <div class="container g-text-center--xs g-ver-center--xs">
-                        <div class="g-margin-b-30--xs">
-                            <div class="g-margin-b-30--xs">
-                                <h2 class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white">We Craft Experience<br>That Help Brands<br>Stand Out</h2>
-                            </div>
-                            <!-- <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
+          </div>
+        </div>
+        <div
+          class="g-fullheight--xs g-bg-position--center swiper-slide"
+          style="background: url('img/1920x1080/01.jpg')"
+        >
+          <div class="container g-text-center--xs g-ver-center--xs">
+            <div class="g-margin-b-30--xs">
+              <div class="g-margin-b-30--xs">
+                <h2
+                  class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"
+                >
+                  We Craft Experience<br />That Help Brands<br />Stand Out
+                </h2>
+              </div>
+              <!-- <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
                                 <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-control-play"></i>
                             </a> -->
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!-- End Swiper Wrapper -->
-
-            <!-- Arrows -->
-            <a href="javascript:void(0);" class="s-swiper__arrow-v1--right s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-right js__swiper-btn--next"></a>
-            <a href="javascript:void(0);" class="s-swiper__arrow-v1--left s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-left js__swiper-btn--prev"></a>
-            <!-- End Arrows -->
-            
-            <a href="#js__scroll-to-section" class="s-scroll-to-section-v1--bc g-margin-b-15--xs">
-                <span class="g-font-size-18--xs g-color--white ti-angle-double-down"></span>
-                <p class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs">Learn More</p>
-            </a>
+          </div>
         </div>
-        <!--========== END SWIPER SLIDER ==========-->
+      </div>
+      <!-- End Swiper Wrapper -->
 
-        <!--========== PAGE CONTENT ==========-->
-        <!-- Features -->
-        <div id="js__scroll-to-section" class="container g-padding-y-80--xs g-padding-y-125--sm">
-            <div class="g-text-center--xs g-margin-b-100--xs">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Welcome to LegitByte</p>
-                <h2 class="g-font-size-32--xs g-font-size-36--md">We Create Beautiful Experiences <br> That Drive Successful Businesses.</h2>
+      <!-- Arrows -->
+      <a
+        href="javascript:void(0);"
+        class="s-swiper__arrow-v1--right s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-right js__swiper-btn--next"
+      ></a>
+      <a
+        href="javascript:void(0);"
+        class="s-swiper__arrow-v1--left s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-left js__swiper-btn--prev"
+      ></a>
+      <!-- End Arrows -->
+
+      <a
+        href="#js__scroll-to-section"
+        class="s-scroll-to-section-v1--bc g-margin-b-15--xs"
+      >
+        <span
+          class="g-font-size-18--xs g-color--white ti-angle-double-down"
+        ></span>
+        <p
+          class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs"
+        >
+          Learn More
+        </p>
+      </a>
+    </div>
+    <!--========== END SWIPER SLIDER ==========-->
+
+    <!--========== PAGE CONTENT ==========-->
+    <!-- Features -->
+    <div
+      id="js__scroll-to-section"
+      class="container g-padding-y-80--xs g-padding-y-125--sm"
+    >
+      <div class="g-text-center--xs g-margin-b-100--xs">
+        <p
+          class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs"
+        >
+          Welcome to LegitByte
+        </p>
+        <h2 class="g-font-size-32--xs g-font-size-36--md">
+          "Empowering Innovation through Digital Solutions" <br />
+          Embrace the Future with our Web App, Mobile App and Blockchain
+          Services.
+        </h2>
+      </div>
+      <div class="row g-margin-b-60--xs g-margin-b-70--md">
+        <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".1s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-desktop"></i>
+              </div>
             </div>
-            <div class="row g-margin-b-60--xs g-margin-b-70--md">
-                <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".1s">
-                                <i class="g-font-size-28--xs g-color--primary ti-desktop"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Responsive Layout</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".2s">
-                                <i class="g-font-size-28--xs g-color--primary ti-settings"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Fully Customizable</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".3s">
-                                <i class="g-font-size-28--xs g-color--primary ti-ruler-alt-2"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Pixel Perfect</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">Responsive Web Applications</h3>
+              <p class="g-margin-b-0--xs">
+                "Seamless User Experience Across All Devices: Embrace the Power
+                of Responsive Web Apps for Your Business Success."
+              </p>
             </div>
-            <!-- // end row  -->
-            <div class="row">
-                <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".4s">
-                                <i class="g-font-size-28--xs g-color--primary ti-package"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Endless Possibilities</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".5s">
-                                <i class="g-font-size-28--xs g-color--primary ti-star"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Powerful Performance</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="clearfix">
-                        <div class="g-media g-width-30--xs">
-                            <div class="wow fadeInDown" data-wow-duration=".3" data-wow-delay=".6s">
-                                <i class="g-font-size-28--xs g-color--primary ti-panel"></i>
-                            </div>
-                        </div>
-                        <div class="g-media__body g-padding-x-20--xs">
-                            <h3 class="g-font-size-18--xs">Parallax Support</h3>
-                            <p class="g-margin-b-0--xs">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- // end row  -->
+          </div>
         </div>
-        <!-- End Features -->
+        <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".2s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-mobile"></i>
+              </div>
+            </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">Mobile Applications</h3>
+              <p class="g-margin-b-0--xs">
+                "Unleashing Mobility and Connectivity: Elevate Your Business
+                with Cutting-Edge Mobile Applications for the Modern World."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".3s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-clipboard"></i>
+              </div>
+            </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">Blockchain Technologies</h3>
+              <p class="g-margin-b-0--xs">
+                "Empowering the Future of Trust and Decentralization: Embrace
+                the Power of Blockchain Technologies for Secure, Transparent,
+                and Innovative Solutions."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // end row  -->
+      <div class="row">
+        <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".4s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-settings"></i>
+              </div>
+            </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">Application Evolution</h3>
+              <p class="g-margin-b-0--xs">
+                "Seamless Aftercare and Continuous Enhancements for Optimal
+                Performance."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".5s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-support"></i>
+              </div>
+            </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">Feature Enrichment</h3>
+              <p class="g-margin-b-0--xs">
+                "Seamlessly Expand Your Application's Capabilities and features
+                with Additions and Enhancements."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="clearfix">
+            <div class="g-media g-width-30--xs">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration=".3"
+                data-wow-delay=".6s"
+              >
+                <i class="g-font-size-28--xs g-color--primary ti-jsfiddle"></i>
+              </div>
+            </div>
+            <div class="g-media__body g-padding-x-20--xs">
+              <h3 class="g-font-size-18--xs">API Empowerment</h3>
+              <p class="g-margin-b-0--xs">
+                "Fuel Your Applications with Custom API Generation and
+                Integration for Streamlined Connectivity and Data Access."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // end row  -->
+    </div>
+    <!-- End Features -->
 
-        <!-- Parallax -->
-        <!-- <div class="js__parallax-window" style="background: url(img/1920x1080/03.jpg) 50% 0 no-repeat fixed;">
+    <!-- Parallax -->
+    <!-- <div class="js__parallax-window" style="background: url(img/1920x1080/03.jpg) 50% 0 no-repeat fixed;">
             <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
                 <div class="g-margin-b-80--xs">
                     <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white">The Fastest Way To Develop</h2>
@@ -273,35 +584,72 @@
                 <a href="http://keenthemes.com/" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50">Learn More</a>
             </div>
         </div> -->
-        <!-- End Parallax -->
+    <!-- End Parallax -->
 
-        <!-- Culture -->
-        <div id="about" class="g-promo-section">
-            <div class="container g-padding-y-80--xs g-padding-y-125--sm">
-                <div class="row">
-                    <div class="col-md-4 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
-                        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Culture</p>
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">About</h2>
-                        </div>
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                            <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">LegitByte</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1">
-                        <p class="g-font-size-18--xs">Top notch product development company, LegitByte has worked with global startups to develop extraordinary solutions and experiences.</p>
-                        <p class="g-font-size-18--xs">We are goal oriented team of engineers to reshape the world. We build robust and scalable solutions to elevate your digital journey across all major platforms - be it custom product development or web2, web3, blockchain and mobile app development - redefining the user experience. We begin by striving to understand the purpose and vision behind the idea, then we roll it up into a well-oiled process that runs the whole gamut from user research and design through dev sprints all the way to launch and beyond.</p>
-                    </div>
-                </div>
+    <!-- Culture -->
+    <div id="about" class="g-promo-section">
+      <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+        <div class="row">
+          <div
+            class="col-md-4 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg"
+          >
+            <p
+              class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs"
+            >
+              Culture
+            </p>
+            <div
+              class="wow fadeInLeft"
+              data-wow-duration=".3"
+              data-wow-delay=".1s"
+            >
+              <h2
+                class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md"
+              >
+                About
+              </h2>
             </div>
-            <div class="col-sm-3 g-promo-section__img-right--lg g-bg-position--center g-height-100-percent--md js__fullwidth-img">
-                <img class="img-responsive" src="img/970x970/03.jpg" alt="Image">
+            <div
+              class="wow fadeInLeft"
+              data-wow-duration=".3"
+              data-wow-delay=".3s"
+            >
+              <h2
+                class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md"
+              >
+                LegitByte
+              </h2>
             </div>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+            <p class="g-font-size-18--xs">
+              Top notch product development company, LegitByte has worked with
+              global startups to develop extraordinary solutions and
+              experiences.
+            </p>
+            <p class="g-font-size-18--xs">
+              We are goal oriented team of engineers to reshape the world. We
+              build robust and scalable solutions to elevate your digital
+              journey across all major platforms - be it custom product
+              development or web2, web3, blockchain and mobile app development -
+              redefining the user experience. We begin by striving to understand
+              the purpose and vision behind the idea, then we roll it up into a
+              well-oiled process that runs the whole gamut from user research
+              and design through dev sprints all the way to launch and beyond.
+            </p>
+          </div>
         </div>
-        <!-- End Culture -->
+      </div>
+      <div
+        class="col-sm-3 g-promo-section__img-right--lg g-bg-position--center g-height-100-percent--md js__fullwidth-img"
+      >
+        <img class="img-responsive" src="img/970x970/05.jpg" alt="Image" />
+      </div>
+    </div>
+    <!-- End Culture -->
 
-        <!-- Subscribe -->
-        <!-- <div class="js__parallax-window" style="background: url(img/1920x1080/07.jpg) 50% 0 no-repeat fixed;">
+    <!-- Subscribe -->
+    <!-- <div class="js__parallax-window" style="background: url(img/1920x1080/07.jpg) 50% 0 no-repeat fixed;">
             <div class="g-container--sm g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
                 <div class="g-margin-b-80--xs">
                     <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Subscribe</p>
@@ -319,40 +667,137 @@
                 </div>
             </div>
         </div> -->
-        <!-- End Subscribe -->
+    <!-- End Subscribe -->
 
-        <!-- Portfolio Filter -->
-        <div id="work" class="container g-padding-y-80--xs">
-            <div class="g-text-center--xs g-margin-b-40--xs">
-                <h2 class="g-font-size-32--xs g-font-size-36--md">Projects</h2>
-            </div>
-            <div class="s-portfolio">
-                <div id="js__filters-portfolio-gallery" class="s-portfolio__filter-v1 cbp-l-filters-text cbp-l-filters-center">
-                    <div data-filter="*" class="s-portfolio__filter-v1-item cbp-filter-item cbp-filter-item-active">Show All</div>
-                    <div data-filter=".graphic" class="s-portfolio__filter-v1-item cbp-filter-item">Graphic</div>
-                    <div data-filter=".logos" class="s-portfolio__filter-v1-item cbp-filter-item">Logo</div>
-                    <div data-filter=".motion" class="s-portfolio__filter-v1-item cbp-filter-item">Motion</div>
-                </div>
-            </div>
+    <!-- Portfolio Filter -->
+    <div id="work" class="container g-padding-y-80--xs">
+      <div class="g-text-center--xs g-margin-b-40--xs">
+        <h2 class="g-font-size-32--xs g-font-size-36--md">Projects</h2>
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <div>
+            <h6
+              style="
+                position: relative;
+                bottom: 53%;
+                left: 15%;
+                font-weight: bolder;
+                font-size: 60%;
+                color: rgb(255, 255, 255);
+              "
+            >
+              Photographer Booking App
+            </h6>
+            <p
+              style="
+                position: relative;
+                bottom: 30%;
+                text-align: start;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                color: white;git remote set-url origin git@github.com:<username>/<repo>.git
+              "
+            >
+              Photele is a photography platform. Where people can find and book
+              photographer’s. Photographers can set photoshoot slots at their
+              own schedule and once anyone books a photoshoot photographer is
+              able to accept or deny the photoshoot. At the time of booking
+              Photele holds the funds and photographers have guaranteed payment
+              after the photoshoot
+            </p>
+            <button>
+              <a
+                href="https://www.photele.com/"
+                target="_blank"
+                style="text-decoration: none; color: white"
+                >Visit</a
+              >
+              <span class="first"></span>
+              <span class="second"></span>
+              <span class="third"></span>
+              <span class="fourth"></span>
+            </button>
+          </div>
+
+          <img
+            src="/img/970x647/p1img1.png"
+            alt="Photele"
+            height="80%"
+            width="60%"
+            style="position: relative; top: 1%; right: 1%;border-radius:10px ;"
+          />
         </div>
-        <!-- End Portfolio Filter -->
 
-        <!-- Portfolio Gallery -->
-        <div class="container g-margin-b-100--xs">
-            <div id="js__grid-portfolio-gallery" class="cbp">
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item logos motion">
+        <div class="slide">
+          <div>
+            <h6
+              style="
+                position: relative;
+                bottom: 53%;
+                left: 15%;
+                font-weight: bolder;
+                font-size: 60%;
+                color: rgb(255, 255, 255);
+              "
+            >
+            Messenger for Photele
+            </h6>
+            <p
+              style="
+                position: relative;
+                bottom: 30%;
+                text-align: start;
+                font-size: 18px;
+                margin-left: 15%;
+                margin-right: 15%;
+                color: white;
+              "
+            >
+            Photographer’s can chat with customers about photoshoots and share ideas directly through Photele Messenger
+            </p>
+          </div>
+          <img
+            src="/img/970x647/p1img2.png"
+            alt="Photele"
+            height="80%"
+            width="60%"
+            style="position: relative; top: 1%; right: 1%; border-radius: 10px;"
+          />
+        </div>
+        <!-- Add more slides here as needed -->
+      </div>
+    </div>
+
+    <!-- <div class="s-portfolio">
+            <div id="js__filters-portfolio-gallery" class="s-portfolio__filter-v1 cbp-l-filters-text cbp-l-filters-center">
+                <div data-filter="*" class="s-portfolio__filter-v1-item cbp-filter-item cbp-filter-item-active">Show All</div>
+                <div data-filter=".graphic" class="s-portfolio__filter-v1-item cbp-filter-item">Graphic</div>
+                <div data-filter=".logos" class="s-portfolio__filter-v1-item cbp-filter-item">Logo</div>
+                <div data-filter=".motion" class="s-portfolio__filter-v1-item cbp-filter-item">Motion</div>
+            </div>
+        </div> -->
+    <!-- End Portfolio Filter -->
+
+    <!-- Portfolio Gallery -->
+    <!-- <div class="container g-margin-b-100--xs">
+            <div id="js__grid-portfolio-gallery" class="cbp"> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item logos motion">
                     <div class="s-portfolio__img-effect">
-                        <img src="img/970x647/05.jpg" alt="Portfolio Image">
+                        <img src="img/970x647/p1.png" alt="Portfolio Image">
                     </div>
                     <div class="s-portfolio__caption-hover--cc">
                         <div class="g-margin-b-25--xs">
-                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Portfolio Item</h4>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Photographer Booking App</h4>
                             <p class="g-color--white-opacity">by KeenThemes Inc.</p>
                         </div>
                         <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
                             <li>
-                                <a href="img/970x647/05.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Portfolio Item <br/> by KeenThemes Inc.">
+                                <a href="img/970x647/p1.png" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Portfolio Item <br/> by KeenThemes Inc.">
                                     <i class="ti-fullscreen"></i>
                                 </a>
                             </li>
@@ -363,9 +808,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item graphic">
+                </div> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item graphic">
                     <div class="s-portfolio__img-effect">
                         <img src="img/970x647/06.jpg" alt="Portfolio Image">
                     </div>
@@ -387,9 +832,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item logos">
+                </div> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item logos">
                     <div class="s-portfolio__img-effect">
                         <img src="img/970x647/07.jpg" alt="Portfolio Image">
                     </div>
@@ -411,9 +856,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item motion graphic">
+                </div> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item motion graphic">
                     <div class="s-portfolio__img-effect">
                         <img src="img/970x647/08.jpg" alt="Portfolio Image">
                     </div>
@@ -435,9 +880,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item logos graphic">
+                </div> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item logos graphic">
                     <div class="s-portfolio__img-effect">
                         <img src="img/970x647/09.jpg" alt="Portfolio Image">
                     </div>
@@ -459,9 +904,9 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- Item -->
-                <div class="s-portfolio__item cbp-item motion graphic">
+                </div> -->
+    <!-- Item -->
+    <!-- <div class="s-portfolio__item cbp-item motion graphic">
                     <div class="s-portfolio__img-effect">
                         <img src="img/970x647/04.jpg" alt="Portfolio Image">
                     </div>
@@ -483,30 +928,52 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <!-- End Item -->
-            </div>
-            <!-- End Portfolio Gallery -->
-        </div>
-        <!-- End Portfolio -->
+                </div> -->
+    <!-- End Item -->
+    <!-- </div> -->
+    <!-- End Portfolio Gallery -->
+    <!-- </div> -->
+    <!-- End Portfolio -->
 
-        <!-- Testimonials -->
-        <div class="js__parallax-window" style="background: url(img/1920x1080/04.jpg) 50% 0 no-repeat fixed;">
-            <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-50--xs">Testimonials</p>
-                <div class="s-swiper js__swiper-testimonials">
-                    <!-- Swiper Wrapper -->
-                    <div class="swiper-wrapper g-margin-b-50--xs">
-                        <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
-                            <div class="g-padding-x-20--xs g-padding-x-50--lg">
-                                <div class="g-margin-b-40--xs">
-                                    <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>"I have been working with LegitByte for about a year now . They are great to work with, highly recommended."</i></p>
-                                </div>
-                                <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
-                                <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Fabio / Photele</h4>
-                            </div>
-                        </div>
-                        <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
+    <!-- Testimonials -->
+    <div
+      class="js__parallax-window"
+      style="background: url(img/1920x1080/04.jpg) 50% 0 no-repeat fixed"
+    >
+      <div
+        class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm"
+      >
+        <p
+          class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-50--xs"
+        >
+          Testimonials
+        </p>
+        <div class="s-swiper js__swiper-testimonials">
+          <!-- Swiper Wrapper -->
+          <div class="swiper-wrapper g-margin-b-50--xs">
+            <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
+              <div class="g-padding-x-20--xs g-padding-x-50--lg">
+                <div class="g-margin-b-40--xs">
+                  <p
+                    class="g-font-size-22--xs g-font-size-28--sm g-color--white"
+                  >
+                    <i
+                      >"I have been working with LegitByte for about a year now
+                      . They are great to work with, highly recommended."</i
+                    >
+                  </p>
+                </div>
+                <div
+                  class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"
+                ></div>
+                <h4
+                  class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs"
+                >
+                  Fabio / Photele
+                </h4>
+              </div>
+            </div>
+            <!-- <div class="swiper-slide g-padding-x-130--sm g-padding-x-150--lg">
                             <div class="g-padding-x-20--xs g-padding-x-50--lg">
                                 <div class="g-margin-b-40--xs">
                                     <p class="g-font-size-22--xs g-font-size-28--sm g-color--white"><i>" I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "</i></p>
@@ -523,228 +990,439 @@
                                 <div class="center-block g-hor-divider__solid--white-opacity-lightest g-width-100--xs g-margin-b-30--xs"></div>
                                 <h4 class="g-font-size-15--xs g-font-size-18--sm g-color--white-opacity-light g-margin-b-5--xs">Jake Richardson / Google</h4>
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Swipper Wrapper -->
+                        </div> -->
+          </div>
+          <!-- End Swipper Wrapper -->
 
-                    <!-- Arrows -->
-                    <div class="g-font-size-22--xs g-color--white-opacity js__swiper-fraction"></div>
-                    <a href="javascript:void(0);" class="g-display-none--xs g-display-inline-block--sm s-swiper__arrow-v1--right s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-right js__swiper-btn--next"></a>
-                    <a href="javascript:void(0);" class="g-display-none--xs g-display-inline-block--sm s-swiper__arrow-v1--left s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-left js__swiper-btn--prev"></a>
-                    <!-- End Arrows -->
-                </div>
-            </div>
+          <!-- Arrows -->
+          <div
+            class="g-font-size-22--xs g-color--white-opacity js__swiper-fraction"
+          ></div>
+          <a
+            href="javascript:void(0);"
+            class="g-display-none--xs g-display-inline-block--sm s-swiper__arrow-v1--right s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-right js__swiper-btn--next"
+          ></a>
+          <a
+            href="javascript:void(0);"
+            class="g-display-none--xs g-display-inline-block--sm s-swiper__arrow-v1--left s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-left js__swiper-btn--prev"
+          ></a>
+          <!-- End Arrows -->
         </div>
-        <!-- End Testimonials -->
+      </div>
+    </div>
+    <!-- End Testimonials -->
 
-        <!-- Clients -->
-        <div class="g-bg-color--sky-light">
-            <div class="g-container--md g-padding-y-80--xs g-padding-y-125--sm">
-                <!-- Swiper Clients -->
-                <div class="s-swiper js__swiper-clients">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="s-clients-v1" src="img/clients/01-dark.png" alt="Clients Logo">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".2s">
-                                <img class="s-clients-v1" src="img/clients/02-dark.png" alt="Clients Logo">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".3s">
-                                <img class="s-clients-v1" src="img/clients/03-dark.png" alt="Clients Logo">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".4s">
-                                <img class="s-clients-v1" src="img/clients/04-dark.png" alt="Clients Logo">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
-                                <img class="s-clients-v1" src="img/clients/05-dark.png" alt="Clients Logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Swiper Clients -->
+    <!-- Clients -->
+    <div class="g-bg-color--sky-light">
+      <div class="g-container--md g-padding-y-80--xs g-padding-y-125--sm">
+        <!-- Swiper Clients -->
+        <div class="s-swiper js__swiper-clients">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="wow fadeIn"
+                data-wow-duration=".3"
+                data-wow-delay=".1s"
+              >
+                <img
+                  class="s-clients-v1"
+                  src="img/clients/01-dark.png"
+                  alt="Clients Logo"
+                />
+              </div>
             </div>
-        </div>
-        <!-- End Clients -->
-
-        <!-- Counter -->
-        <div class="js__parallax-window" style="background: url(img/1920x1080/06.jpg) 50% 0 no-repeat fixed;">
-            <div class="container g-padding-y-80--xs g-padding-y-125--sm">
-                <div class="row">
-                    <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg">
-                        <div class="g-text-center--xs">
-                            <div class="g-margin-b-10--xs">
-                                <figure class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter">6</figure>
-                                <span class="g-font-size-40--xs g-color--white">k</span>
-                            </div>
-                            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
-                            <h4 class="g-font-size-18--xs g-color--white">Lines of Code</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg">
-                        <div class="g-text-center--xs">
-                            <figure class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter">5</figure>
-                            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
-                            <h4 class="g-font-size-18--xs g-color--white">Award Winners</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--sm">
-                        <div class="g-text-center--xs">
-                            <figure class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter">15</figure>
-                            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
-                            <h4 class="g-font-size-18--xs g-color--white">Multiple Pages</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6 g-full-width--xs">
-                        <div class="g-text-center--xs">
-                            <div class="g-margin-b-10--xs">
-                                <figure class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter">2</figure>
-                                <span class="g-font-size-40--xs g-color--white">x</span>
-                            </div>
-                            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
-                            <h4 class="g-font-size-18--xs g-color--white">Faster Support</h4>
-                        </div>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <div
+                class="wow fadeIn"
+                data-wow-duration=".3"
+                data-wow-delay=".2s"
+              >
+                <img
+                  class="s-clients-v1"
+                  src="img/clients/02-dark.png"
+                  alt="Clients Logo"
+                />
+              </div>
             </div>
-        </div>
-        <!-- End Counter -->
-
-        <!-- Feedback Form -->
-        <div id="feedback" class="g-bg-color--sky-light">
-            <div class="container g-padding-y-80--xs g-padding-y-125--sm">
-                <div class="g-text-center--xs g-margin-b-80--xs">
-                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Feedback</p>
-                    <h2 class="g-font-size-32--xs g-font-size-36--md">Send us a note</h2>
-                </div>
-                <form>
-                    <div class="row g-margin-b-40--xs">
-                        <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
-                            <div class="g-margin-b-20--xs">
-                                <input type="text" class="form-control s-form-v2__input g-radius--50" placeholder="* Name">
-                            </div>
-                            <div class="g-margin-b-20--xs">
-                                <input type="email" class="form-control s-form-v2__input g-radius--50" placeholder="* Email">
-                            </div>
-                            <input type="text" class="form-control s-form-v2__input g-radius--50" placeholder="* Phone">
-                        </div>
-                        <div class="col-sm-6">
-                            <textarea class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs" rows="8" placeholder="* Your message"></textarea>
-                        </div>
-                    </div>
-                    <div class="g-text-center--xs">
-                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs">Submit</button>
-                    </div>
-                </form>
+            <div class="swiper-slide">
+              <div
+                class="wow fadeIn"
+                data-wow-duration=".3"
+                data-wow-delay=".3s"
+              >
+                <img
+                  class="s-clients-v1"
+                  src="img/clients/03-dark.png"
+                  alt="Clients Logo"
+                />
+              </div>
             </div>
+            <div class="swiper-slide">
+              <div
+                class="wow fadeIn"
+                data-wow-duration=".3"
+                data-wow-delay=".4s"
+              >
+                <img
+                  class="s-clients-v1"
+                  src="img/clients/04-dark.png"
+                  alt="Clients Logo"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="wow fadeIn"
+                data-wow-duration=".3"
+                data-wow-delay=".5s"
+              >
+                <img
+                  class="s-clients-v1"
+                  src="img/clients/05-dark.png"
+                  alt="Clients Logo"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End Feedback Form -->
+        <!-- End Swiper Clients -->
+      </div>
+    </div>
+    <!-- End Clients -->
 
-        <!-- Google Map -->
-        <!-- <section class="s-google-map">
+    <!-- Counter -->
+    <div
+      class="js__parallax-window"
+      style="background: url(img/1920x1080/06.jpg) 50% 0 no-repeat fixed"
+    >
+      <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+        <div class="row">
+          <div
+            class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg"
+          >
+            <div class="g-text-center--xs">
+              <div class="g-margin-b-10--xs">
+                <figure
+                  class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter"
+                >
+                  6
+                </figure>
+                <span class="g-font-size-40--xs g-color--white">k</span>
+              </div>
+              <div
+                class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"
+              ></div>
+              <h4 class="g-font-size-18--xs g-color--white">Lines of Code</h4>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg"
+          >
+            <div class="g-text-center--xs">
+              <figure
+                class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter"
+              >
+                5
+              </figure>
+              <div
+                class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"
+              ></div>
+              <h4 class="g-font-size-18--xs g-color--white">Award Winners</h4>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--sm"
+          >
+            <div class="g-text-center--xs">
+              <figure
+                class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter"
+              >
+                15
+              </figure>
+              <div
+                class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"
+              ></div>
+              <h4 class="g-font-size-18--xs g-color--white">Multiple Pages</h4>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6 g-full-width--xs">
+            <div class="g-text-center--xs">
+              <div class="g-margin-b-10--xs">
+                <figure
+                  class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter"
+                >
+                  2
+                </figure>
+                <span class="g-font-size-40--xs g-color--white">x</span>
+              </div>
+              <div
+                class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"
+              ></div>
+              <h4 class="g-font-size-18--xs g-color--white">Faster Support</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Counter -->
+
+    <!-- Feedback Form -->
+    <div id="feedback" class="g-bg-color--sky-light">
+      <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+        <div class="g-text-center--xs g-margin-b-80--xs">
+          <p
+            class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs"
+          >
+            Feedback
+          </p>
+          <h2 class="g-font-size-32--xs g-font-size-36--md">Send us a note</h2>
+        </div>
+        <form>
+          <div class="row g-margin-b-40--xs">
+            <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
+              <div class="g-margin-b-20--xs">
+                <input
+                  type="text"
+                  class="form-control s-form-v2__input g-radius--50"
+                  placeholder="* Name"
+                />
+              </div>
+              <div class="g-margin-b-20--xs">
+                <input
+                  type="email"
+                  class="form-control s-form-v2__input g-radius--50"
+                  placeholder="* Email"
+                />
+              </div>
+              <input
+                type="text"
+                class="form-control s-form-v2__input g-radius--50"
+                placeholder="* Phone"
+              />
+            </div>
+            <div class="col-sm-6">
+              <textarea
+                class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs"
+                rows="8"
+                placeholder="* Your message"
+              ></textarea>
+            </div>
+          </div>
+          <div class="g-text-center--xs">
+            <button
+              type="submit"
+              class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Feedback Form -->
+
+    <!-- Google Map -->
+    <!-- <section class="s-google-map">
             <div id="js__google-container" class="s-google-container g-height-400--xs"></div>
         </section> -->
-        <!-- End Google Map -->
-        <!--========== END PAGE CONTENT ==========-->
+    <!-- End Google Map -->
+    <!--========== END PAGE CONTENT ==========-->
 
-        <!--========== FOOTER ==========-->
-        <footer class="g-bg-color--dark">
-            <!-- Links -->
-            <div class="g-hor-divider__dashed--white-opacity-lightest">
-                <div class="container g-padding-y-80--xs">
-                    <div class="row">
-                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="/">Home</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#about">About</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#work">Work</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#feedback">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">Twitter</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.facebook.com/legitbyte">Facebook</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.linkedin.com/company/legitbyte">LinkedIn</a></li>
-                                <!-- <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">YouTube</a></li> -->
-                            </ul>
-                        </div>
-                        <div class="col-sm-2 g-margin-b-40--xs g-margin-b-0--md">
-                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">Subscribe to Our Newsletter</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">Privacy Policy</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">Terms &amp; Conditions</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
-                            <h3 class="g-font-size-18--xs g-color--white">LegitByte</h3>
-                            <p class="g-color--white-opacity">LogicByte is an IT company in Pakistan, Established in 2022. providing service in ERP Software Development & Consultancy, Android Application Development, E-Commerce Application & Web Development, Domain Registration & Web Hosting, IT Training Workshops.</p>
-                        </div>
-                    </div>
-                </div>
+    <!--========== FOOTER ==========-->
+    <footer class="g-bg-color--dark">
+      <!-- Links -->
+      <div class="g-hor-divider__dashed--white-opacity-lightest">
+        <div class="container g-padding-y-80--xs">
+          <div class="row">
+            <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+              <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                <li>
+                  <a class="g-font-size-15--xs g-color--white-opacity" href="/"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="g-font-size-15--xs g-color--white-opacity"
+                    href="#about"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="g-font-size-15--xs g-color--white-opacity"
+                    href="#work"
+                    >Work</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="g-font-size-15--xs g-color--white-opacity"
+                    href="#feedback"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
             </div>
-            <!-- End Links -->
-
-            <!-- Copyright -->
-            <div class="container g-padding-y-50--xs">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-xs-12">
-                        <a href="index.html">
-                            <img class="g-width-100--xs g-height-auto--xs" style="border-radius: 50%;" src="img/legitlogo.png" alt="Megakit Logo">
-                        </a>
-                    </div>
-                    
-                    <div style="margin-top: 40px; margin-left: 50px;" class="col-lg-4 col-md-4 col-xs-12 g-text-left--xs">
-                        <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">Copyright © 2023 <a href="https://legitbyte.com">LegitByte</a> All Rights Reserved</p>
-                    </div>
- 
-                </div>
+            <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+              <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                <li>
+                  <a class="g-font-size-15--xs g-color--white-opacity" href="#"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="g-font-size-15--xs g-color--white-opacity"
+                    href="https://www.facebook.com/legitbyte"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="g-font-size-15--xs g-color--white-opacity"
+                    href="https://www.linkedin.com/company/legitbyte"
+                    >LinkedIn</a
+                  >
+                </li>
+                <!-- <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">YouTube</a></li> -->
+              </ul>
             </div>
-            <!-- End Copyright -->
-        </footer>
-        <!--========== END FOOTER ==========-->
+            <div class="col-sm-2 g-margin-b-40--xs g-margin-b-0--md">
+              <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                <li>
+                  <a class="g-font-size-15--xs g-color--white-opacity" href="#"
+                    >Subscribe to Our Newsletter</a
+                  >
+                </li>
+                <li>
+                  <a class="g-font-size-15--xs g-color--white-opacity" href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a class="g-font-size-15--xs g-color--white-opacity" href="#"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md"
+            >
+              <h3 class="g-font-size-18--xs g-color--white">LegitByte</h3>
+              <p class="g-color--white-opacity">
+                LegitByte is an IT company in Pakistan, Established in 2022.
+                providing service in ERP Software Development & Consultancy,
+                Android Application Development, E-Commerce Application & Web
+                Development, Domain Registration & Web Hosting, IT Training
+                Workshops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Links -->
 
-        <!-- Back To Top -->
-        <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
+      <!-- Copyright -->
+      <div class="container g-padding-y-20--xs">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-12">
+            <a href="index.html">
+              <img
+                class="g-width-100--xs g-height-auto--xs"
+                style="height: 170px; width: 190px"
+                src="img/t2logo2.png"
+                alt="Megakit Logo"
+              />
+            </a>
+          </div>
 
-        <!--========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========-->
-        <!-- Vendor -->
-        <script type="text/javascript" src="vendor/jquery.min.js"></script>
-        <script type="text/javascript" src="vendor/jquery.migrate.min.js"></script>
-        <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="vendor/jquery.smooth-scroll.min.js"></script>
-        <script type="text/javascript" src="vendor/jquery.back-to-top.min.js"></script>
-        <script type="text/javascript" src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
-        <script type="text/javascript" src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script type="text/javascript" src="vendor/swiper/swiper.jquery.min.js"></script>
-        <script type="text/javascript" src="vendor/waypoint.min.js"></script>
-        <script type="text/javascript" src="vendor/counterup.min.js"></script>
-        <script type="text/javascript" src="vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-        <script type="text/javascript" src="vendor/jquery.parallax.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script>
-        <script type="text/javascript" src="vendor/jquery.wow.min.js"></script>
+          <div
+            style="margin-top: 40px; margin-left: 50px"
+            class="col-lg-4 col-md-4 col-xs-12 g-text-left--xs"
+          >
+            <p
+              class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"
+            >
+              Copyright © 2023 <a href="https://legitbyte.com">LegitByte</a> All
+              Rights Reserved
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Copyright -->
+    </footer>
+    <!--========== END FOOTER ==========-->
 
-        <!-- General Components and Settings -->
-        <script type="text/javascript" src="js/global.min.js"></script>
-        <script type="text/javascript" src="js/components/header-sticky.min.js"></script>
-        <script type="text/javascript" src="js/components/scrollbar.min.js"></script>
-        <script type="text/javascript" src="js/components/magnific-popup.min.js"></script>
-        <script type="text/javascript" src="js/components/swiper.min.js"></script>
-        <script type="text/javascript" src="js/components/counter.min.js"></script>
-        <script type="text/javascript" src="js/components/portfolio-3-col.min.js"></script>
-        <script type="text/javascript" src="js/components/parallax.min.js"></script>
-        <script type="text/javascript" src="js/components/google-map.min.js"></script>
-        <script type="text/javascript" src="js/components/wow.min.js"></script>
-        <!--========== END JAVASCRIPTS ==========-->
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
 
-    </body>
-    <!-- End Body -->
+    <!--========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========-->
+    <!-- Vendor -->
+    <script type="text/javascript" src="vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.migrate.min.js"></script>
+    <script
+      type="text/javascript"
+      src="vendor/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="vendor/jquery.smooth-scroll.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="vendor/jquery.back-to-top.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="vendor/scrollbar/jquery.scrollbar.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="vendor/magnific-popup/jquery.magnific-popup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="vendor/swiper/swiper.jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="vendor/waypoint.min.js"></script>
+    <script type="text/javascript" src="vendor/counterup.min.js"></script>
+    <script
+      type="text/javascript"
+      src="vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"
+    ></script>
+    <script type="text/javascript" src="vendor/jquery.parallax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script>
+    <script type="text/javascript" src="vendor/jquery.wow.min.js"></script>
+
+    <!-- General Components and Settings -->
+    <script type="text/javascript" src="js/global.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/components/header-sticky.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/components/scrollbar.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/components/magnific-popup.min.js"
+    ></script>
+    <script type="text/javascript" src="js/components/swiper.min.js"></script>
+    <script type="text/javascript" src="js/components/counter.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/components/portfolio-3-col.min.js"
+    ></script>
+    <script type="text/javascript" src="js/components/parallax.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/components/google-map.min.js"
+    ></script>
+    <script type="text/javascript" src="js/components/wow.min.js"></script>
+    <!--========== END JAVASCRIPTS ==========-->
+  </body>
+  <!-- End Body -->
 </html>
