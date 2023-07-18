@@ -1,0 +1,91 @@
+
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px; /* Optional: Add padding to the card section */
+}
+
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow from affecting the card size */
+}
+
+.custom-card img {
+  width: 100%;
+  height: 200px; /* Increased image height */
+  object-fit: cover;
+  object-position: top; /* Keep the top part of the image visible */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.custom-card .content { 
+  flex: 1; /* Take up remaining space in the card */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-card h2 {
+  margin-top: 0;
+}
+
+.custom-card p {
+  color: #555;
+  flex: 1; /* Take up remaining space in the content section */
+}
+
+.custom-card .visit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-card .visit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Your existing styles */
+
+/* Stylish main heading styles for "Projects" heading */
+.stylish-heading {
+  font-family: "Arial", sans-serif;
+  font-size: 42px; /* Adjust font size to your preference for a more prominent heading */
+  font-size: clamp(32px, 4vw, 42px); /* Responsive font size */
+  color: #333; /* Text color */
+  margin: 0; /* Remove margin to eliminate any spacing around the heading */
+  padding-bottom: 10px; /* Add padding to separate the heading from the content below */
+  position: relative; /* For the pseudo-element */
+  margin-bottom: -60px;
+}
+
+.stylish-heading::after {
+  content: "";
+  display: block;
+  width: 60px; /* Adjust the length of the decorative line */
+  height: 4px; /* Adjust the thickness of the decorative line */
+  background-color: #36a0e7; /* Color of the decorative line */
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Center the line horizontally */
+  transform: translateX(-50%); /* Center the line horizontally */
+  border-radius: 2px; /* Add some roundness to the ends of the line */
+}
+

@@ -76,127 +76,7 @@
     />
     <link rel="manifest" href="img/site.webmanifest" />
   </head>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .slider-container {
-      width: 100%;
-      overflow-x: hidden; /* Hide horizontal scrollbar */
-      scroll-behavior: smooth; /* Enable smooth scrolling */
-    }
-
-    .slider {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .slide {
-      min-width: 100%;
-      height: 85vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 36px;
-      color: #fff;
-    }
-
-    /* Customize slide styles as needed */
-    .slide:nth-child(1) {
-      background-color: #ec9b7e;
-    }
-    .slide:nth-child(2) {
-      background-color: #ff6262e8;
-    }
-
-    button {
-      border: none;
-      overflow-y: hidden;
-      padding: 5px 40px;
-      font-size: 24px;
-      position: relative;
-      background: transparent;
-      color: #ffffff;
-      text-transform: uppercase;
-      border: 3px solid #ffffff;
-      cursor: pointer;
-      transition: all 0.7s;
-      overflow: hidden;
-      border-radius: 20px;
-      left: 15%;
-    }
-
-    button:hover {
-      color: #ffffff;
-    }
-    span {
-      transition: all 0.7s;
-      z-index: -1;
-    }
-
-    button .first {
-      content: "";
-      position: absolute;
-      right: 100%;
-      top: 0;
-      width: 25%;
-      height: 100%;
-      background: #8f8d88;
-    }
-
-    button:hover .first {
-      top: 0;
-      right: 0;
-    }
-    button .second {
-      content: "";
-      position: absolute;
-      left: 25%;
-      top: -100%;
-      height: 100%;
-      width: 25%;
-      background: #8f8d88;
-    }
-
-    button:hover .second {
-      top: 0;
-      left: 50%;
-    }
-
-    button .third {
-      content: "";
-      position: absolute;
-      left: 50%;
-      height: 100%;
-      top: 100%;
-      width: 25%;
-      background: #8f8d88;
-    }
-
-    button:hover .third {
-      top: 0;
-      left: 25%;
-    }
-
-    button .fourth {
-      content: "";
-      position: absolute;
-      left: 100%;
-      top: 0;
-      height: 100%;
-      width: 25%;
-      background: #8f8d88;
-    }
-
-    button:hover .fourth {
-      top: 0;
-      left: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -262,18 +142,18 @@
 
               <div
                 class="s-header__logo"
-                style="width: 160px; height: 90px; overflow: hidden"
+                style="width: 160px; height: 70px; overflow: hidden"
               >
                 <a href="index.html" class="s-header__logo-link">
                   <img
                     class="s-header__logo-img s-header__logo-img-default"
-                    style="height: 180px; transform: translateY(-40px)"
+                    style="height: 190px; transform: translateY(-40px);margin-top: -30px;"
                     src="img/t2logo2.png"
                     alt="LegitByte Logo"
                   />
                   <img
                     class="s-header__logo-img s-header__logo-img-shrink"
-                    style="height: 180px; transform: translateY(-40px)"
+                    style="height: 190px; transform: translateY(-40px); margin-top: -35px;"
                     src="img/t2logo.png"
                     alt="LegitByte Logo"
                   />
@@ -388,7 +268,7 @@
                 <h2
                   class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white"
                 >
-                  We Craft Experience<br />That Help Brands<br />Stand Out
+                  We Transform Visions into Reality<br />Embrace the Future with our<br />Services
                 </h2>
               </div>
               <!-- <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=lcFYdgZKZxY" title="Intro Video">
@@ -558,14 +438,13 @@
                 data-wow-duration=".3"
                 data-wow-delay=".6s"
               >
-                <i class="g-font-size-28--xs g-color--primary ti-jsfiddle"></i>
+                <i class="g-font-size-28--xs g-color--primary ti-pencil-alt"></i>
               </div>
             </div>
             <div class="g-media__body g-padding-x-20--xs">
-              <h3 class="g-font-size-18--xs">API Empowerment</h3>
+              <h3 class="g-font-size-18--xs">Delivering QA testing services</h3>
               <p class="g-margin-b-0--xs">
-                "Fuel Your Applications with Custom API Generation and
-                Integration for Streamlined Connectivity and Data Access."
+                "we meticulously assess and validate your applications, ensuring they meet the highest standards of functionality, performance, and security."
               </p>
             </div>
           </div>
@@ -672,10 +551,95 @@
     <!-- Portfolio Filter -->
     <div id="work" class="container g-padding-y-80--xs">
       <div class="g-text-center--xs g-margin-b-40--xs">
-        <h2 class="g-font-size-32--xs g-font-size-36--md">Projects</h2>
+        <!-- <h2 class="g-font-size-32--xs g-font-size-36--md">Projects</h2> -->
+        <h2 class="g-font-size-32--xs g-font-size-36--md stylish-heading">Projects</h2>
+
+
       </div>
     </div>
-    <div class="slider-container">
+
+
+
+<!-- Card Section -->
+<!-- <div class="card-section">
+  <div class="custom-card">
+    <img src="img/970x647/p1img1.png" alt="Image 1">
+    <div class="content">
+      <h2>Photographer Booking App</h2>
+      <p>Photele is a photography platform. Where people can find and book photographer’s. Photographers can set photoshoot slots at their own schedule and once anyone books a photoshoot photographer is able to accept or deny the photoshoot. At the time of booking Photele holds the funds and photographers have guaranteed payment after the photoshoot.</p>
+      <a href="https://www.example.com/card1" target="_blank" class="visit-button">Visit</a>
+    </div>
+  </div>
+  <div class="custom-card">
+    <img src="img/970x647/p1img2.png" alt="Image 2">
+    <div class="content">
+      <h2>Messenger for Photele</h2>
+      <p>Photographer’s can chat with customers about photoshoots and share ideas directly through Photele Messenger.</p>
+      <a href="https://www.example.com/card2" target="_blank" class="visit-button">Visit</a>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Card Section -->
+
+<div class="card-section">
+  <!-- Card1 -->
+  <div class="custom-card">
+    <img src="img/970x647/p1img1.png" alt="Image 1">
+    <div class="content">
+      <h2>Photographer Booking App</h2>
+      <p>Photele is a photography platform. Where people can find and book photographer’s. Photographers can set photoshoot slots at their own schedule and once anyone books a photoshoot photographer is able to accept or deny the photoshoot. At the time of booking Photele holds the funds and photographers have guaranteed payment after the photoshoot.</p>
+      <a href="https://www.photele.com/" target="_blank" class="visit-button">Visit</a>
+    </div>
+  </div>
+  <!-- Card2 -->
+  <div class="custom-card">
+    <img src="img/970x647/p1img2.png" alt="Image 2">
+    <div class="content">
+      <h2>Messenger for Photele</h2>
+      <p>Photographer’s can chat with customers about photoshoots and share ideas directly through Photele Messenger.</p>
+  
+    </div>
+  </div>
+ 
+</div>
+
+<div class="card-section">
+ <!-- Card3 -->
+ <div class="custom-card">
+  <img src="img/970x647/p2img1.png" alt="Image 1">
+  <div class="content">
+    <h2>Food ordering platform website</h2>
+    <p>D-vour is an online fresh food delivery service in the United States.The only platform which offers a unique search capability that allows users to access hundreds of unique and popular dishes based on country or dish reference, you can order your favorite food made by the chef of your choice, home-cooked, restaurant or professional.</p>
+    <a href="https://d-vour.com/" target="_blank" class="visit-button">Visit</a>
+  </div>
+</div>
+<!-- Card4 -->
+<div class="custom-card">
+  <img src="img/970x647/p2img2.png" alt="Image 1">
+  <div class="content">
+    <h2>Restaurant Dashboard</h2>
+    <p>Chefs and restaurant owners can use their dashboard to manage their menus, track orders and manage payments.</p>
+  </div>
+</div>
+<!-- Card5 -->
+<div class="custom-card">
+  <img src="img/970x647/p2img3.jpg" alt="Image 1">
+  <div class="content">
+    <h2>Food ordering platform (Customer & Restaurant) App</h2>
+    <p>D-vour is an online fresh food delivery service in the United States.The only platform which offers a unique search capability that allows users to access hundreds of unique and popular dishes based on country or dish reference, you can order your favorite food made by the chef of your choice, home-cooked, restaurant or professional.</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <!-- <div class="slider-container">
       <div class="slider">
         <div class="slide">
           <div>
@@ -699,7 +663,7 @@
                 font-size: 18px;
                 margin-left: 15%;
                 margin-right: 15%;
-                color: white;git remote set-url origin git@github.com:<username>/<repo>.git
+                color: white;
               "
             >
               Photele is a photography platform. Where people can find and book
@@ -728,7 +692,7 @@
             alt="Photele"
             height="80%"
             width="60%"
-            style="position: relative; top: 1%; right: 1%;border-radius:10px ;"
+            style="position: relative; top: 1%; right: 1%; border-radius: 10px"
           />
         </div>
 
@@ -744,7 +708,7 @@
                 color: rgb(255, 255, 255);
               "
             >
-            Messenger for Photele
+              Messenger for Photele
             </h6>
             <p
               style="
@@ -757,7 +721,8 @@
                 color: white;
               "
             >
-            Photographer’s can chat with customers about photoshoots and share ideas directly through Photele Messenger
+              Photographer’s can chat with customers about photoshoots and share
+              ideas directly through Photele Messenger
             </p>
           </div>
           <img
@@ -765,12 +730,12 @@
             alt="Photele"
             height="80%"
             width="60%"
-            style="position: relative; top: 1%; right: 1%; border-radius: 10px;"
+            style="position: relative; top: 1%; right: 1%; border-radius: 10px"
           />
         </div>
-        <!-- Add more slides here as needed -->
+         Add more slides here as needed 
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="s-portfolio">
             <div id="js__filters-portfolio-gallery" class="s-portfolio__filter-v1 cbp-l-filters-text cbp-l-filters-center">
@@ -1232,7 +1197,7 @@
     <footer class="g-bg-color--dark">
       <!-- Links -->
       <div class="g-hor-divider__dashed--white-opacity-lightest">
-        <div class="container g-padding-y-80--xs">
+        <div class="container g-padding-y-70--xs">
           <div class="row">
             <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
               <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
@@ -1325,13 +1290,13 @@
       <!-- End Links -->
 
       <!-- Copyright -->
-      <div class="container g-padding-y-20--xs">
+      <div class="container g-padding-y-10--xs">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-12">
             <a href="index.html">
               <img
                 class="g-width-100--xs g-height-auto--xs"
-                style="height: 170px; width: 190px"
+                style="height: 190px; width: 190px;margin-top: -35px;"
                 src="img/t2logo2.png"
                 alt="Megakit Logo"
               />
@@ -1339,7 +1304,7 @@
           </div>
 
           <div
-            style="margin-top: 40px; margin-left: 50px"
+            style="margin-top: 60px; margin-left: 50px"
             class="col-lg-4 col-md-4 col-xs-12 g-text-left--xs"
           >
             <p
