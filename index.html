@@ -8,9 +8,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="canonical" href="https://legitbyte.com/" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>LegitByte</title>
-    <meta name="keywords" content="HTML5 Theme" />
+    <meta
+      name="keywords"
+      content="Web app development services, Mobile app development company, Blockchain development solutions, Custom web application development, iOS app development services, Android app development company, Ethereum smart contract development, Blockchain consulting services, Cross-platform app development, DApp (Decentralized Application) development, Hybrid mobile app development, Hyperledger blockchain development, Responsive web design services, Mobile app UI/UX design, Solidity smart contract development, Progressive Web App (PWA) development, Blockchain integration services, Mobile app maintenance and support, Smart contract auditing, Web application security services"
+    />
     <meta
       name="description"
       content="Empowering Innovation for a Digital Universe"
@@ -75,6 +79,19 @@
       href="img/favicon-16x16.png"
     />
     <link rel="manifest" href="img/site.webmanifest" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4H5H6EMVGP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4H5H6EMVGP");
+    </script>
   </head>
   <link rel="stylesheet" href="style.css" />
 
@@ -455,7 +472,7 @@
             <div class="g-media__body g-padding-x-20--xs">
               <h3 class="g-font-size-18--xs">Delivering QA testing services</h3>
               <p class="g-margin-b-0--xs">
-                "We meticulously assess and validate your applications, ensuring
+                "we meticulously assess and validate your applications, ensuring
                 they meet the highest standards of functionality, performance,
                 and security."
               </p>
@@ -1178,12 +1195,16 @@
           </p>
           <h2 class="g-font-size-32--xs g-font-size-36--md">Send us a note</h2>
         </div>
-        <form>
+        <form
+          action="https://formsubmit.co/muhsanjavaid@gmail.com"
+          method="post"
+        >
           <div class="row g-margin-b-40--xs">
             <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
               <div class="g-margin-b-20--xs">
                 <input
                   type="text"
+                  name="Name"
                   class="form-control s-form-v2__input g-radius--50"
                   placeholder="* Name"
                 />
@@ -1191,18 +1212,21 @@
               <div class="g-margin-b-20--xs">
                 <input
                   type="email"
+                  name="Email"
                   class="form-control s-form-v2__input g-radius--50"
                   placeholder="* Email"
                 />
               </div>
               <input
                 type="text"
+                name="Phone"
                 class="form-control s-form-v2__input g-radius--50"
                 placeholder="* Phone"
               />
             </div>
             <div class="col-sm-6">
               <textarea
+                name="Message"
                 class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs"
                 rows="8"
                 placeholder="* Your message"
@@ -1210,6 +1234,9 @@
             </div>
           </div>
           <div class="g-text-center--xs">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value="https://legitbyte.com/" />
             <button
               type="submit"
               class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs"
