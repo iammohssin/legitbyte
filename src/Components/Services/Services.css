@@ -1,0 +1,143 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    font-size: 6vh;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.welcome-heading {
+    color: rgb(7, 177, 177);
+    font-weight: bold;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 50px;
+}
+
+.service-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .heading {
+        font-size: 3.5vh !important;
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+        margin-bottom: -25px;
+    }
+
+    .services {
+        margin: 0 40px;
+    }
+
+    .service-card {
+        width: calc(50% - 20px);
+    }
+
+    .card-title {
+        font-size: 1.4vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-title {
+        font-size: 2.5vh;
+    }
+}
+
+@media (max-width: 1020px) {
+    .card-title {
+        font-size: 1.4vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 3.8vh !important;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: -25px;
+    }
+
+    .welcome-heading {
+        font-size: 1.2rem;
+    }
+
+    .services {
+        margin: 0 10px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 1.8vh;
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1716px) {
+    .service-card {
+        max-width: 500px;
+        margin: 30px;
+    }
+}
+
+@media (min-width: 1717px) and (max-width: 1996px) {
+    .service-card {
+        max-width: 650px;
+        margin: 55px;
+    }
+}
+
+@media (min-width: 1997px) and (max-width: 2279px) {
+    .service-card {
+        max-width: 700px;
+        margin: 90px;
+
+    }
+}
+
+@media (min-width: 2280px) and (max-width: 2479px) {
+    .service-card {
+        width: 26rem !important;
+        margin: 90px;
+    }
+}
+
+@media (min-width: 2480px) and (max-width: 2800px) {
+    .service-card {
+        width: 24.5rem !important;
+        margin: 130px;
+    }
+}

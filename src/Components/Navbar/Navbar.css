@@ -1,0 +1,28 @@
+.navbar {
+    background-color: transparent;
+    height: 75px;
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-brand img {
+        width: 100px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .navbar .navbar-brand img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 993px) {
+    .navbar .navbar-brand img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-brand img {
+        width: 100px;
+    }
+}

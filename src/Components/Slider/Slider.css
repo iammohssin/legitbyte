@@ -1,0 +1,233 @@
+.slider-container {
+    height: 648px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item img {
+    max-height: 100%;
+    width: auto;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image-caption {
+    font-size: 4vh !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    transform: scale(0.9) !important;
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-indicators {
+    visibility: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.learnmore-btn {
+    color: white;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    font-size: 3.2vh;
+    cursor: pointer !important;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .image-caption {
+        margin: auto !important;
+        font-size: 2.2vh !important;
+    }
+
+    .slider-container {
+        height: 101.5vh !important;
+    }
+
+    .slider-container img {
+        height: 101.5vh !important;
+        object-fit: cover;
+    }
+
+
+    #symbol {
+        font-size: 20px !important;
+    }
+
+    .learnmore-btn {
+        font-size: 2vh;
+
+    }
+
+    .back-to-top {
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (min-width: 550px) and (max-width:1300px) {
+    .image-caption {
+        font-size: 3vh !important;
+    }
+
+    .slider-container {
+        height: 102vh !important;
+    }
+
+    .slider-container img {
+        height: 102vh !important;
+        object-fit: cover;
+    }
+
+    .learnmore-btn {
+        font-size: 2.5vh;
+    }
+}
+
+@media (max-width: 350px) {
+    .image-caption {
+        font-size: 1.5vh !important;
+    }
+
+    .learnmore-btn {
+        font-size: 1.4vh !important;
+        margin: auto !important;
+    }
+
+    .slider-container {
+        height: 100vh !important;
+    }
+
+    .slider-container img {
+        height: 100vh !important;
+        object-fit: cover;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        transform: scale(0.7) !important;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 2000px) {
+    .image-caption {
+        font-size: 3.7vh !important;
+    }
+
+    .slider-container {
+        height: 100vh !important;
+    }
+
+    .slider-container img {
+        height: 100vh !important;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 799px) {
+    .image-caption {
+        font-size: 2.7vh !important;
+    }
+
+    .slider-container {
+        height: 112vh !important;
+    }
+
+    .slider-container img {
+        height: 112vh !important;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 2001px) and (max-width: 2350px) {
+    .image-caption {
+        font-size: 3.7vh !important;
+    }
+
+    .slider-container {
+        height: 100vh !important;
+    }
+
+    .slider-container img {
+        height: 100vh !important;
+        object-fit: cover;
+    }
+
+}
+
+@media (min-width: 2351px) and (max-width: 2800px) {
+    .image-caption {
+        font-size: 3.7vh !important;
+    }
+
+    .slider-container {
+        height: 100vh !important;
+    }
+
+    .slider-container img {
+        height: 100vh !important;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .image-caption {
+        font-size: 3.9vh !important;
+    }
+
+    .slider-container {
+        height: 100vh !important;
+    }
+
+    .slider-container img {
+        height: 100vh !important;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1800px) {
+    .image-caption {
+        font-size: 3.9vh !important;
+    }
+
+    .slider-container {
+        height: 103vh !important;
+    }
+
+    .slider-container img {
+        height: 103vh !important;
+        object-fit: cover;
+    }
+}

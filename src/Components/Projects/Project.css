@@ -1,0 +1,135 @@
+.projects {
+    width: 100%;
+    margin-left: 0px;
+    padding: 10px 0 25px 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.project-card {
+    transition: transform 0.4s, box-shadow 0.4s;
+    margin: 15px;
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: 330px;
+    max-height: 50vh;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    padding: 10px;
+    padding-top: 4px;
+    margin-top: 10px;
+    width: 100%;
+    height: 27vh;
+    border-radius: 21px;
+    object-fit: cover;
+}
+
+.card-btn:hover {
+    background-color: #fff;
+    color: black !important;
+    transition: background-color 0.5s ease;
+}
+
+.card-btn-2 {
+    border: 1px white solid;
+    color: white !important;
+}
+
+.card-btn-2:hover {
+    background-color: #fff;
+    color: black !important;
+    transition: background-color 0.5s ease;
+}
+
+.modal-image {
+    height: auto;
+    max-width: 90%;
+    border-radius: 12px;
+    margin: 10px auto;
+    margin-left: 25px;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: #205b6d;
+    color: white;
+}
+
+.btn-close {
+    font-size: 20px;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 109vh;
+    margin-bottom: 0px;
+    margin: auto;
+}
+
+.proj-desc {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .project-card {
+        flex: 1 1 calc(50% - 40px);
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1716px) {
+    .project-card {
+        max-width: 390px;
+        margin: 30px;
+    }
+}
+
+@media (min-width: 1717px) and (max-width: 1996px) {
+    .project-card {
+        max-width: 470px;
+    }
+}
+
+@media (min-width: 1997px) and (max-width: 2279px) {
+    .project-card {
+        max-width: 500px;
+        margin: 50px;
+
+    }
+}
+
+@media (min-width: 2280px) and (max-width: 2479px) {
+    .project-card {
+        max-width: 510px;
+        margin: 55px;
+    }
+}
+
+@media (min-width: 2480px) and (max-width: 2800px) {
+    .project-card {
+        max-width: 520px;
+        margin: 75px;
+    }
+}

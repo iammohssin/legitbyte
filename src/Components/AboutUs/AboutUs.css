@@ -1,0 +1,113 @@
+/* Global styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.image {
+    background: url('../../images/07.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 120.9%;
+    margin-left: -120px;
+    height: 50vh;
+    opacity: 0.7;
+    top: 0;
+    z-index: -1;
+}
+
+.aboutus {
+    width: calc(100% - 40px);
+    margin: 20px;
+    margin-top: -145px;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.description {
+    padding: 35px 140px 10px 140px;
+    font-size: 18px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .aboutus {
+        padding: 30px;
+    }
+
+    .description {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .image {
+        height: 30vh;
+        width: 59vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .image {
+        height: 30vh;
+        width: 183.3vh;
+    }
+
+    .description {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .image {
+        height: 30vh;
+        width: 83.2vh;
+
+    }
+
+    .description {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1020px) and (min-width: 800px) {
+    .image {
+        height: 30vh;
+        width: 74.4vh;
+
+    }
+
+    .description {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Additional media queries for smaller screens */
+@media (max-width: 767px) {
+    .image {
+        height: 20vh;
+        width: 106vw;
+        margin-left: -35px;
+    }
+
+    .aboutus {
+        margin-top: -60px;
+    }
+
+    .description {
+        padding: 0px;
+        font-size: 10.2px;
+    }
+}
